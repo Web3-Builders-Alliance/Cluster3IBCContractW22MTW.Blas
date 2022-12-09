@@ -82,7 +82,7 @@ pub fn execute_send_msgs(
     let msg = WasmMsg::Execute {
         contract_addr: cfg.simple_ica_controller.into(),
         msg: to_binary(&ica_msg)?,
-        funds: vec![],
+        funds: vec![], 
     };
 
     let res = Response::new().add_message(msg);
